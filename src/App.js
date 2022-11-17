@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./components/Login";
+import { useSelector } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import ShowSub from "./pages/ShowSub";
+import HomePage from "./pages/HomePage";
 
 function App() {
+  const isLoggedIn = useSelector((state) => state.log.isLoggedIn);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <BrowserRouter>
+        {}
+
+        <Routes>
+          <Route path="/" element={!isLoggedIn && <Login />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route exact path="/post/:postId" element={<ShowSub />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
