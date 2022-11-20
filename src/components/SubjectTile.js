@@ -21,7 +21,7 @@ const SubjectTile = () => {
   return (
     <div className="mt-10">
       <h2 className="text-3xl font-bold text-center">Subject Tiles</h2>
-      <div className="flex lg:flex-row flex-col gap-3 lg:ml-28 ml-12 mt-6">
+      <div className="flex lg:flex-row flex-col gap-4 lg:ml-28 ml-12 mt-6">
         {renderedSub}
       </div>
     </div>

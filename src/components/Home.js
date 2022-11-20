@@ -21,7 +21,7 @@ const Home = () => {
             width: "60px",
             borderRadius: "100%",
           }}
-          className="lg:mt-10"
+          className="lg:mt-6"
         />
         <div>
           <h3 className="lg:text-2xl text-xl font-bold">Welcome back, Dapo</h3>
@@ -36,7 +36,7 @@ const Home = () => {
           {" "}
           <button
             onClick={logout}
-            className="bg-red-600 text-white py-2 px-4 rounded-[3px] absolute lg:top-4 bottom-4 right-4 font-bold hover:bg-red-400"
+            className="bg-red-600 text-white py-2 px-4 rounded-[3px] absolute lg:top-5 top-[16.5rem] right-4 font-bold hover:bg-red-400"
           >
             Logout
           </button>
